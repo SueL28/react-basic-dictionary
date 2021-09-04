@@ -6,6 +6,15 @@
     margin-top: 35px;
 }
 
+.Search-Response .word{
+    font-size: 30pt;
+    font-weight: 700;
+}
+
+.Search-Response .pronunciation{
+    font-size: 16pt;
+}
+
 .Search-Response .search-headings{
     margin-top: 25px;
 }

@@ -6,7 +6,18 @@ export default function SearchResponse(){
 
     return(
         <div className="Search-Response">
-            <h3 className="word">Word Searched </h3>
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-6 p-0">
+                        <h3 className="word">Word Searched</h3> 
+                    </div>
+                    <div className="col-sm-6">
+                        <span className="pronunciation">🔊 pronunciation</span>
+                    </div>
+                </div>
+            
+
+            </div>
 
             <div className="definition">
                 <h4 className="search-headings">Definition</h4>
