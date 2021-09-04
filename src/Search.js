@@ -20,6 +20,8 @@ export default function Search (){
         event.preventDefault();
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
         axios.get(apiUrl).then(getDefinition);
+
+        //documentation for api https://dictionaryapi.dev/
     }
 
     return(
