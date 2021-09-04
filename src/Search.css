@@ -3,15 +3,17 @@
 }
 
 .Search .search-bar{
-  padding: 7px;
+  padding: 13px;
   text-align: center;
   border-radius: 7px;
+  font-size: 14pt;
 }
 
 .Search .search-button{
-    padding: 6px;
+    padding: 10px;
     margin-left: 10px;
     border-radius: 7px;
+    font-size: 14pt;
     transition: all 150ms ease-in-out;
 }
 
