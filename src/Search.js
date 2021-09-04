@@ -1,8 +1,16 @@
 import React, {useState} from "react";
 import "./Search.css"
+import axios from "axios";
+import SearchResponse from "./SearchResponse";
+
 
 export default function Search (){
     let [keyword, setKeyword] = useState("");
+    let [definition, setDefintion] = useState("");
+
+    function getDefinition(response){
+        setDefintion(response.data[0]);
+    }
 
     function searchedWord(submit){
         setKeyword(submit.target.value);
@@ -10,7 +18,8 @@ export default function Search (){
 
     function searchSubmit(event){
         event.preventDefault();
-        alert (`Searching for ${keyword}`);
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`
+        axios.get(apiUrl).then(getDefinition);
     }
 
     return(
@@ -20,6 +29,7 @@ export default function Search (){
                 <input type="submit" value="🔎" className="search-button"/>
             </form>
 
+            <SearchResponse data={definition} />
 
         </div>
     );

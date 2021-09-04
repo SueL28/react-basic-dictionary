@@ -2,7 +2,8 @@ import React from "react";
 import "./SearchResponse.css"
 import tempImage from "./temp-image.png"
 
-export default function SearchResponse(){
+export default function SearchResponse(props){
+    console.log(props.data);
 
     return(
         <div className="Search-Response">
@@ -42,25 +43,25 @@ export default function SearchResponse(){
                         <br/>
                         <div className="row">
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                         </div>
                         <br/>
                         <div className="row">
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                             <div className="col-sm-4">
-                                <img src={tempImage} alt="temp-Image" className="img-fluid"></img>
+                                <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
                             </div>
                         </div>
                     </div>
