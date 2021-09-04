@@ -1,0 +1,20 @@
+.Search{
+    text-align: center;
+}
+
+.Search .search-bar{
+  padding: 7px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.Search .search-button{
+    padding: 6px;
+    margin-left: 10px;
+    border-radius: 7px;
+    transition: all 150ms ease-in-out;
+}
+
+.Search .search-button:hover{
+    background-color: rgba(192, 192, 250, 0.5);
+}
