@@ -8,7 +8,7 @@ export default function Search (){
     let [keyword, setKeyword] = useState("");
     let [definition, setDefintion] = useState("");
     let [searched, setSearched]= useState(false);
-    let [synonyms, setSynonyms] = useState("");
+
 
     function getDefinition(response){
         setSearched(true);
