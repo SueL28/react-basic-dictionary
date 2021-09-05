@@ -11,13 +11,13 @@ export default function SearchResponse(props){
             <div className="Search-Response">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-4 p-0">
+                        <div className="col-sm-5 p-0">
                             <h3 className="word text-capitalize">{props.data.word}</h3>  
                         </div>
                         <div className="col-sm-2">
                             <span className="text-capitalize word-type">{props.data.meanings[0].partOfSpeech}</span>
                         </div>
-                        <div className="col-sm-6">
+                        <div className="col-sm-5">
                             <span className="pronunciation">Pronunciation: {props.data.phonetic}</span>
                         </div>
                     </div>
