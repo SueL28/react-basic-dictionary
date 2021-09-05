@@ -3,7 +3,7 @@ import "./SearchResponse.css"
 import tempImage from "./temp-image.png"
 
 export default function SearchResponse(props){
-    console.log(props.data)
+
 
 
     if (props.data){
