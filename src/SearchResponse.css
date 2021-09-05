@@ -20,6 +20,10 @@
     font-size: 16pt;
 }
 
+.Search-Response .definition .response:first-letter{
+    text-transform: uppercase;
+}
+
 .Search-Response .search-headings{
     margin-top: 25px;
 }
@@ -30,4 +34,12 @@
 
 .Search-Response .synonyms{
     word-spacing: 4px;
+}
+
+.Search-Response .example-sentence{
+    font-size: 15pt;
+}
+
+.Search-Response .example-sentence:first-letter{
+    text-transform: uppercase;
 }

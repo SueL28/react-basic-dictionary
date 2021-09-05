@@ -3,6 +3,8 @@ import "./SearchResponse.css"
 import tempImage from "./temp-image.png"
 
 export default function SearchResponse(props){
+    console.log(props.data)
+
 
     if (props.data){
         return(
@@ -16,7 +18,7 @@ export default function SearchResponse(props){
                             <span className="text-capitalize word-type">{props.data.meanings[0].partOfSpeech}</span>
                         </div>
                         <div className="col-sm-7">
-                            <span className="pronunciation">Pronunciation:{props.data.phonetic}</span>
+                            <span className="pronunciation">Pronunciation: {props.data.phonetic}</span>
                         </div>
                     </div>
                 
@@ -32,7 +34,7 @@ export default function SearchResponse(props){
                     <h4 className="search-headings">Similar Words</h4>
     
                     <p className="response synonyms">
-                         {props.data.meanings[0].definitions[0].synonyms[0]}, {props.data.meanings[0].definitions[0].synonyms[1]}, {props.data.meanings[0].definitions[0].synonyms[2]}, {props.data.meanings[0].definitions[0].synonyms[3]}
+                         {props.data.meanings[0].definitions[0].synonyms[0]}, {props.data.meanings[0].definitions[0].synonyms[1]}, {props.data.meanings[0].definitions[0].synonyms[2]}
                     </p>
                 </div>
                 <div className="origin">
@@ -40,37 +42,11 @@ export default function SearchResponse(props){
     
                     <p className="response">{props.data.origin}</p>
                 </div>
-                <div className="images">
-                    <h4 className="search-headings">Related Images to WORD</h4>
+                <div className="example">
+                    <h4 className="search-headings text-capitalize">{props.data.word} used in an Example</h4>
+                    <p className="example-sentence">{props.data.meanings[0].definitions[0].example}</p>
     
-                    <div className="image-grid">
-                        <div className="container">
-                            <br/>
-                            <div className="row">
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                            </div>
-                            <br/>
-                            <div className="row">
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                                <div className="col-sm-4">
-                                    <img src={tempImage} alt="temp-holder" className="img-fluid"></img>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
     
                     
                 </div>
