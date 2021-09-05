@@ -11,6 +11,11 @@
     font-weight: 700;
 }
 
+.Search-Response .word-type{
+    font-size: 16pt;
+    font-style: italic;
+}
+
 .Search-Response .pronunciation{
     font-size: 16pt;
 }
@@ -21,4 +26,8 @@
 
 .Search-Response  .response{
     font-size: 15pt;
+}
+
+.Search-Response .synonyms{
+    word-spacing: 4px;
 }

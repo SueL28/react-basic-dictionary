@@ -7,9 +7,13 @@ import SearchResponse from "./SearchResponse";
 export default function Search (){
     let [keyword, setKeyword] = useState("");
     let [definition, setDefintion] = useState("");
+    let [searched, setSearched]= useState(false);
+    let [synonyms, setSynonyms] = useState("");
 
     function getDefinition(response){
+        setSearched(true);
         setDefintion(response.data[0]);
+
     }
 
     function searchedWord(submit){
@@ -24,15 +28,29 @@ export default function Search (){
         //documentation for api https://dictionaryapi.dev/
     }
 
-    return(
-        <div className="Search">
-            <form onSubmit={searchSubmit}>
-                <input type="search" placeholder="Search to Define Word" className="search-bar" autoFocus={true} onChange={searchedWord}/>
-                <input type="submit" value="🔎" className="search-button"/>
-            </form>
+    if (searched){
+        
+        return(
+            <div className="Search">
+                <form onSubmit={searchSubmit}>
+                    <input type="search" placeholder="Search to Define Word" className="search-bar" autoFocus={true} onChange={searchedWord}/>
+                    <input type="submit" value="🔎" className="search-button"/>
+                </form>
+    
+                <SearchResponse data={definition}/>
+    
+            </div>
+        );
+    } else {
+        return(
+            <div className="Search">
+                <form onSubmit={searchSubmit}>
+                    <input type="search" placeholder="Search to Define Word" className="search-bar" autoFocus={true} onChange={searchedWord}/>
+                    <input type="submit" value="🔎" className="search-button"/>
+                </form>
 
-            <SearchResponse data={definition} />
-
-        </div>
-    );
+    
+            </div>
+        );
+    }
 }
